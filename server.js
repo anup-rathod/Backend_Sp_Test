@@ -8,6 +8,10 @@ const port = process.env.PORT || 5000;
 app.use(cors()); // Use cors middleware to allow all origins
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Hello There');
+});
+
 // Azure OpenAI initialization
 const apiKey = process.env.AZURE_OPENAI_API_KEY || "1fac5591063f45efab2df26dac051a34"; 
 const endpoint = process.env.AZURE_OPENAI_ENDPOINT || "https://chatbotfordemosales.openai.azure.com/";
